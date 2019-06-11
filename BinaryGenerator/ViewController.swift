@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var num3: UITextField!
     @IBOutlet weak var num2: UITextField!
     @IBOutlet weak var num1: UITextField!
+    
+    // Holds the temporary value of answer
     var tempNum = 0
     
     
