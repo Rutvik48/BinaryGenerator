@@ -46,44 +46,21 @@ class DecimalGeneratorViewController: UIViewController {
     //Checks the input if it is valid, if string is a number or not
     func validateInput(_ input1:String)-> Bool{
         
+        let binaryCalculator = BinaryCalculator()
+        decimalValue = binaryCalculator.getBinaryToDecimal(binaryString: input1)
         
-        //First removes extra white spaces from input
-        let input = input1.trimmingCharacters(in: .whitespacesAndNewlines)
-        //
-        let tempArr = Array(input)
-        
-        var counter = tempArr.count
-        
-        // If cunter is equal to 0 the input is empty
-        if(counter <= 0){
-            return false
-        }
-        
-        // For loop checks each character
-        for i in tempArr{
-           
-            // NOTE: counter goes MSB to LSB, decreasing counter by 1 in each round
-            counter -= 1
+        if (decimalValue == -1){
             
-            // Validating input, it has to be either 1 or 0
-            if (i == "0" || i == "1"){
-                
-                // If it is 1, add 2^counter to decimalValue
-                if (i == "1"){
-                    decimalValue += Int(pow(2.0, Double(counter)))
-                }
-  
-            }else{
-                
-                // string contained a digit except 1 or 0 or contains a character
-                showToast(controller: self, message : "Check Your Input.", seconds: 2.0)
-                resetAnsLable()
-                return false
-                
-            }
+            // string contained a digit except 1 or 0 or contains a character
+            showToast(controller: self, message : "Check Your Input.", seconds: 2.0)
+            resetAnsLable()
+            return false
+            
+        }else{
+            
+            return true
+
         }
-        // Returns true if input has only "1"s and "0"s in it
-        return true
     }
     
     // Creates a small pop-up using alert class, to show user small message

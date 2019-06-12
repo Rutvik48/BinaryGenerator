@@ -31,30 +31,10 @@ class ViewController: UIViewController {
     // Generates binery of given integer
     func getBinery(_ value: Int)-> String{
     
-        // Initiallizing String which will be returned at the end
-        var str = ""
+        let binaryCalculator = BinaryCalculator()
+
+        return ( binaryCalculator.getDecimalToBinary(value: value))
         
-        // As "value" is let, making another variable ("temp") that can be change later
-        var temp = value
-        
-        // Loop to generate the binery value
-        while(temp>0){
-        
-            if(temp%2 == 0){
-            
-                str = "0"+str
-            
-            }else{
-                
-                str = "1"+str
-            
-            }
-            
-            temp = temp/2
-        
-        }
-        
-        return "0"+str
     }
     
     // Creates a small pop-up using alert class, to show user small message
@@ -111,7 +91,6 @@ class ViewController: UIViewController {
                  ans.text = "Answer"
             }
         }
-        
     }
     
     // First (Top) Generate Binery button
@@ -121,19 +100,19 @@ class ViewController: UIViewController {
         
     }
     
-    // Second (Middle) Generate Binery button
-    @IBAction func btn2(_ sender: Any) {
-        
-        startProcess(num2, ans2)
-
-    }
-    
-    // Third (Bottom) Generate Binery button
-    @IBAction func btn3(_ sender: Any) {
-        
-        startProcess(num3, ans3)
-
-    }
+//    // Second (Middle) Generate Binery button
+//    @IBAction func btn2(_ sender: Any) {
+//
+//        startProcess(num2, ans2)
+//
+//    }
+//
+//    // Third (Bottom) Generate Binery button
+//    @IBAction func btn3(_ sender: Any) {
+//
+//        startProcess(num3, ans3)
+//
+//    }
 
 
 }
