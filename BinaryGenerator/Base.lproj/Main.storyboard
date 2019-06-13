@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="landscape">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,26 +15,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BinaryGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uuk-tf-tJ2" userLabel="topStack">
-                                <rect key="frame" x="50" y="82" width="380" height="156"/>
+                                <rect key="frame" x="50" y="370" width="314" height="156"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKg-bP-ZH0">
-                                        <rect key="frame" x="0.0" y="0.0" width="380" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="42"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ww-gx-14i">
-                                        <rect key="frame" x="149.5" y="57" width="81.5" height="42"/>
+                                        <rect key="frame" x="116.33333333333334" y="57" width="81.333333333333343" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5D-JV-uhx">
-                                        <rect key="frame" x="0.0" y="114" width="380" height="42"/>
+                                        <rect key="frame" x="0.0" y="114" width="314" height="42"/>
                                         <color key="backgroundColor" red="0.42503788790000002" green="0.7441258181" blue="1" alpha="0.28903499119999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Generate Binary"/>
@@ -108,46 +108,87 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jT8-xY-roX">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="82"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Binary Generator    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-oY-UQg">
-                                        <rect key="frame" x="60" y="13.5" width="360" height="55"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <color key="textColor" red="0.96620899438858032" green="0.14937510331095963" blue="0.22504395093605192" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="JyL-oY-UQg" firstAttribute="centerX" secondItem="jT8-xY-roX" secondAttribute="centerX" id="Nzk-rn-Srk"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JyL-oY-UQg" secondAttribute="trailing" constant="5" id="rts-fe-T6T"/>
-                                    <constraint firstItem="JyL-oY-UQg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jT8-xY-roX" secondAttribute="leading" constant="5" id="xRf-ev-MBA"/>
-                                    <constraint firstItem="JyL-oY-UQg" firstAttribute="centerY" secondItem="jT8-xY-roX" secondAttribute="centerY" id="xse-Fb-Zav"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mc-xq-nJ2">
-                                <rect key="frame" x="276" y="257" width="179" height="38"/>
+                                <rect key="frame" x="210" y="799" width="179" height="38"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Decimal Generator"/>
                                 <connections>
                                     <segue destination="Fgm-qZ-sCG" kind="show" id="HlM-gN-ZLZ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jT8-xY-roX" customClass="BinaryGenerator">
+                                <rect key="frame" x="0.0" y="59" width="414" height="311"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6Eo-sZ-iBk">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igI-IH-QXc">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Binary Generator">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="currentSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Lk-VS-BGr"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qf-f6-cEB" userLabel="Decimal Generator">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Decimal Generator">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntf-vZ-8Ne"/>
+                                                    <segue destination="Fgm-qZ-sCG" kind="show" id="aDv-k4-Rc9"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhH-sx-WFM">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Binary Addition">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBJ-qF-0Db"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heK-QU-gUJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Binary Multiplication">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ZD-Gq-tnh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6Eo-sZ-iBk" firstAttribute="top" secondItem="jT8-xY-roX" secondAttribute="top" id="RoG-KV-2Qt"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Eo-sZ-iBk" secondAttribute="trailing" constant="20" id="SP9-vj-q3j"/>
+                                    <constraint firstItem="6Eo-sZ-iBk" firstAttribute="leading" secondItem="jT8-xY-roX" secondAttribute="leading" constant="20" id="ZWO-Lh-grd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.8823304105635752" green="0.92961881234295418" blue="1" alpha="0.68000000000000005" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="jT8-xY-roX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1NV-I9-Dd4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8mc-xq-nJ2" secondAttribute="bottom" constant="25" id="1pc-Sw-cAz"/>
-                            <constraint firstItem="uuk-tf-tJ2" firstAttribute="top" secondItem="jT8-xY-roX" secondAttribute="bottom" id="4JK-l4-mCt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8mc-xq-nJ2" secondAttribute="trailing" constant="25" id="5ea-Bn-ldv"/>
-                            <constraint firstItem="jT8-xY-roX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8KC-u1-wPY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jT8-xY-roX" secondAttribute="trailing" id="9gZ-IC-6o6"/>
+                            <constraint firstItem="uuk-tf-tJ2" firstAttribute="top" secondItem="jT8-xY-roX" secondAttribute="bottom" id="OLa-qM-zKK"/>
+                            <constraint firstItem="jT8-xY-roX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Qs2-bh-eVr"/>
+                            <constraint firstItem="jT8-xY-roX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TdE-Us-Ska"/>
                             <constraint firstItem="uuk-tf-tJ2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j2p-s0-v9C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uuk-tf-tJ2" secondAttribute="trailing" constant="50" id="oM5-n2-7FZ"/>
                             <constraint firstItem="uuk-tf-tJ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pXc-Jj-tlh"/>
-                            <constraint firstItem="jT8-xY-roX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pnE-v8-Bva"/>
                             <constraint firstItem="uuk-tf-tJ2" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sb3-fx-SuB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -162,40 +203,44 @@
                         <outlet property="ans1" destination="7ww-gx-14i" id="gZ2-hg-bk7"/>
                         <outlet property="ans2" destination="p7t-Ia-yBT" id="hGi-JT-qpj"/>
                         <outlet property="ans3" destination="DwC-cp-5IE" id="10E-ud-5Lh"/>
+                        <outlet property="currentSelectedOption" destination="igI-IH-QXc" id="GOt-R2-TKL"/>
                         <outlet property="num1" destination="VKg-bP-ZH0" id="XCQ-Z5-0nO"/>
                         <outlet property="num2" destination="rlH-bu-v68" id="NQk-to-agx"/>
                         <outlet property="num3" destination="Rcg-TO-W1n" id="Xvt-An-2Um"/>
+                        <outletCollection property="selectedOptions" destination="1Qf-f6-cEB" collectionClass="NSMutableArray" id="Xy7-vd-7Hm"/>
+                        <outletCollection property="selectedOptions" destination="AhH-sx-WFM" collectionClass="NSMutableArray" id="pOa-f0-9Yk"/>
+                        <outletCollection property="selectedOptions" destination="heK-QU-gUJ" collectionClass="NSMutableArray" id="058-Hz-RUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-155" y="117"/>
+            <point key="canvasLocation" x="-155.07246376811597" y="116.51785714285714"/>
         </scene>
         <!--Decimal Generator View Controller-->
         <scene sceneID="Ecs-ZN-lch">
             <objects>
                 <viewController id="Fgm-qZ-sCG" customClass="DecimalGeneratorViewController" customModule="BinaryGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O0j-15-xWq">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y4g-X1-5VN" userLabel="topStack">
-                                <rect key="frame" x="50" y="82" width="380" height="156"/>
+                                <rect key="frame" x="50" y="370" width="314" height="156"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xl3-cA-8sQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="380" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="42"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKm-VR-uMi">
-                                        <rect key="frame" x="149.5" y="57" width="81.5" height="42"/>
+                                        <rect key="frame" x="116.33333333333334" y="57" width="81.333333333333343" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOl-up-Wix">
-                                        <rect key="frame" x="0.0" y="114" width="380" height="42"/>
+                                        <rect key="frame" x="0.0" y="114" width="314" height="42"/>
                                         <color key="backgroundColor" red="0.42503788790000002" green="0.7441258181" blue="1" alpha="0.28903499119999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Generate Decimal"/>
@@ -216,11 +261,11 @@
                                     <constraint firstItem="AKm-VR-uMi" firstAttribute="top" secondItem="Xl3-cA-8sQ" secondAttribute="bottom" constant="15" id="yVr-Iq-uu4"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-2l-RD5">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="82"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-2l-RD5" customClass="DecimalGenerator">
+                                <rect key="frame" x="0.0" y="44" width="414" height="326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decimal Generator    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1S-kZ-cCT">
-                                        <rect key="frame" x="42.5" y="13.5" width="395.5" height="55"/>
+                                        <rect key="frame" x="9.3333333333333428" y="135.66666666666666" width="395.33333333333326" height="55"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <color key="textColor" red="0.96620899439999997" green="0.14937510330000001" blue="0.22504395090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -237,7 +282,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcV-Qp-LHQ">
-                                <rect key="frame" x="25" y="257" width="163" height="38"/>
+                                <rect key="frame" x="25" y="799" width="163" height="38"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Binary Generator"/>
                                 <connections>
@@ -270,4 +315,7 @@
             <point key="canvasLocation" x="474" y="116"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HlM-gN-ZLZ"/>
+    </inferredMetricsTieBreakers>
 </document>

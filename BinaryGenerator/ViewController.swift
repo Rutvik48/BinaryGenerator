@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var num3: UITextField!
     @IBOutlet weak var num2: UITextField!
     @IBOutlet weak var num1: UITextField!
+    @IBOutlet var selectedOptions: [UIButton]!
     
+    @IBOutlet weak var currentSelectedOption: UIButton!
     // Holds the temporary value of answer
     var tempNum = 0
     
@@ -28,6 +30,45 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func currentSelection(_ sender: Any) {
+        showHideDropMenu()
+    }
+    
+    func showHideDropMenu(){
+        selectedOptions.forEach{(button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    enum Options: String{
+        case binaryGenerator = "Binary Generator"
+        case decimalGenerator = "Decimal Generator"
+        case binaryMultiplication = "Binary Multiplication"
+        case binaryAddition = "Binary Addition"
+    }
+    
+    @IBAction func optionSelected(_ sender: Any) {
+        
+        guard let selectedOption = (sender as AnyObject).currentTitle, let options = Options(rawValue: selectedOption!) else{
+            return
+        }
+        
+        switch options {
+            case .binaryGenerator:
+                print("Binary Generator Selected")
+        case .binaryAddition:
+            print("Binary Addition Selected")
+        case .binaryMultiplication:
+            print("Binary Multiplication Selected")
+        default:
+                print("Decimal Generator Slected")
+        }
+        currentSelectedOption.setTitle(selectedOption, for: .normal)
+        showHideDropMenu()
+    }
     // Generates binery of given integer
     func getBinery(_ value: Int)-> String{
     
@@ -99,6 +140,8 @@ class ViewController: UIViewController {
         startProcess(num1, ans1)
         
     }
+    
+    
     
 //    // Second (Middle) Generate Binery button
 //    @IBAction func btn2(_ sender: Any) {
