@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6f7-Tv-q0e">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -113,7 +113,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <state key="normal" title="Decimal Generator"/>
                                 <connections>
-                                    <segue destination="Fgm-qZ-sCG" kind="show" id="HlM-gN-ZLZ"/>
+                                    <segue destination="Fgm-qZ-sCG" kind="push" id="HlM-gN-ZLZ"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jT8-xY-roX" customClass="BinaryGenerator">
@@ -312,10 +312,149 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPS-oE-I3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="116"/>
+            <point key="canvasLocation" x="729" y="121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Nq-9d-9kU">
+            <objects>
+                <viewController id="6f7-Tv-q0e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GUj-zZ-fYI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="ContainerStack" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WLO-Vf-Det">
+                                <rect key="frame" x="0.0" y="64" width="414" height="778"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sI2-IG-ABw" customClass="DropDownMenuContainer">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
+                                        <connections>
+                                            <segue destination="Abr-iS-Cee" kind="embed" id="Kfi-7I-qI4"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7b-Ej-3mQ" customClass="MethodsContainer">
+                                        <rect key="frame" x="0.0" y="389" width="414" height="389"/>
+                                        <connections>
+                                            <segue destination="sY5-WF-jIH" kind="embed" id="uVO-nF-Zuf"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WLO-Vf-Det" firstAttribute="leading" secondItem="Mwd-Ul-2Mz" secondAttribute="leading" id="AT6-LQ-QFj"/>
+                            <constraint firstItem="WLO-Vf-Det" firstAttribute="top" secondItem="Mwd-Ul-2Mz" secondAttribute="top" constant="20" id="SKX-Wv-rCa"/>
+                            <constraint firstItem="Mwd-Ul-2Mz" firstAttribute="bottom" secondItem="WLO-Vf-Det" secondAttribute="bottom" constant="20" id="fdj-yj-xAU"/>
+                            <constraint firstItem="WLO-Vf-Det" firstAttribute="trailing" secondItem="Mwd-Ul-2Mz" secondAttribute="trailing" id="vuK-nh-5w0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mwd-Ul-2Mz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKe-ax-6rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="128"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="88G-K9-Bsz">
+            <objects>
+                <viewController id="Abr-iS-Cee" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbf-bz-Pw9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjs-O2-AcG" customClass="BinaryGenerator">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="SGi-fd-ZfS">
+                                        <rect key="frame" x="20" y="20" width="374" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itK-h2-PoY">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Binary Generator">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="currentSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thM-JK-UkU"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9k-P8-Hkl" userLabel="Decimal Generator">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Decimal Generator">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7nR-8a-a8D"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqS-tA-jdz">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Binary Addition">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXD-cS-cdP"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hH-cN-z9R">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="35"/>
+                                                <state key="normal" title="Binary Multiplication">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="optionSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSQ-TD-1UT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SGi-fd-ZfS" firstAttribute="top" secondItem="sjs-O2-AcG" secondAttribute="top" constant="20" id="NQ9-tW-H7v"/>
+                                    <constraint firstItem="SGi-fd-ZfS" firstAttribute="leading" secondItem="sjs-O2-AcG" secondAttribute="leading" constant="20" id="OKq-c6-yPq"/>
+                                    <constraint firstAttribute="trailing" secondItem="SGi-fd-ZfS" secondAttribute="trailing" constant="20" id="y12-IN-6i6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sjs-O2-AcG" firstAttribute="leading" secondItem="dbf-bz-Pw9" secondAttribute="leading" id="2hz-oX-AG9"/>
+                            <constraint firstAttribute="bottom" secondItem="sjs-O2-AcG" secondAttribute="bottom" id="Ko7-YN-LPe"/>
+                            <constraint firstItem="sjs-O2-AcG" firstAttribute="top" secondItem="dbf-bz-Pw9" secondAttribute="top" id="NMY-hX-Z0C"/>
+                            <constraint firstAttribute="trailing" secondItem="sjs-O2-AcG" secondAttribute="trailing" id="re8-Jn-FMI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qSv-Fq-0IF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMv-aT-Mcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2402.898550724638" y="-3.0133928571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7uO-SL-Ple">
+            <objects>
+                <viewController id="sY5-WF-jIH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nBy-KQ-Gm9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="389"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WXF-Dd-1jl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JlA-zP-wkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2401" y="298"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="0dl-hK-FME"/>
         <segue reference="HlM-gN-ZLZ"/>
     </inferredMetricsTieBreakers>
 </document>
