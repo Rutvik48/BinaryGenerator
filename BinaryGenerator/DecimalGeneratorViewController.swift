@@ -47,7 +47,7 @@ class DecimalGeneratorViewController: UIViewController {
     func validateInput(_ input1:String)-> Bool{
         
         let binaryCalculator = BinaryCalculator()
-        decimalValue = binaryCalculator.getBinaryToDecimal(binaryString: input1)
+        decimalValue = binaryCalculator.validateAndGetDecimalFromBinary(binaryString: input1)
         
         if (decimalValue == -1){
             
